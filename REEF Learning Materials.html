@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>REEF Learning Materials</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: single column, header band + three labeled groups of link cards */
+:root {
+  --bg: #ffffff; --fg: #010101; --muted: #424143; --rule: #d9d7d8; --card: #ffffff; --card-hover: #f6f5f5;
+  --red: #B71F34; --yellow: #FCC424; --blue: #05A7E0; --aqua: #7DCFD8;
+  --band: #010101; --band-fg: #ffffff;
+  --sans: "Post Grotesk", "Px Grotesk", Arial, Helvetica, sans-serif;
+  --display: "Arial Black", "Px Grotesk", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #231F20; --fg: #ffffff; --muted: #c9c6c7; --rule: #4a4547; --card: #2c2728; --card-hover: #363031;
+  --band: #010101; --band-fg: #ffffff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #231F20; --fg: #ffffff; --muted: #c9c6c7; --rule: #4a4547; --card: #2c2728; --card-hover: #363031;
+  --band: #010101; --band-fg: #ffffff; color-scheme: dark }
+
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 16px; line-height: 1.5; }
+.wrap { max-width: 920px; margin: 0 auto; padding-block: 40px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.dashes { display: flex; gap: 8px; margin-bottom: 20px; }
+.dashes span { width: 40px; height: 8px; }
+.d1 { background: var(--red) } .d2 { background: var(--yellow) } .d3 { background: var(--blue) } .d4 { background: var(--aqua) }
+
+header h1 { font-family: var(--display); font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.05; margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em; }
+header .full { font-weight: 700; margin: 0 0 8px; }
+header p.lede { margin: 0; max-width: 62ch; color: var(--muted); }
+
+section { margin-top: 44px; }
+.label { display: inline-block; background: var(--band); color: var(--band-fg); font-family: var(--display);
+  text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; padding: 6px 12px; }
+.sub { margin: 10px 0 18px; color: var(--muted); font-size: 0.95rem; border-bottom: 1px solid var(--rule); padding-bottom: 12px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.grid.two { grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); }
+
+a.card { display: flex; flex-direction: column; gap: 8px; min-width: 0; text-decoration: none; color: var(--fg);
+  background: var(--card); border: 1px solid var(--rule); padding: 20px 20px 18px; position: relative; overflow: hidden;
+  transition: background .15s, transform .15s; }
+a.card::before { content: ""; position: absolute; top: -18px; right: -18px; width: 56px; height: 56px;
+  background: var(--chip); opacity: .9; transform: rotate(18deg); }
+a.card:hover { background: var(--card-hover); transform: translateY(-2px); }
+a.card:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.card h3 { margin: 0; font-family: var(--display); font-size: 1.2rem; line-height: 1.2; padding-right: 36px; }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.card .go { margin-top: auto; padding-top: 6px; font-weight: 700; font-size: 0.85rem; letter-spacing: .04em; text-transform: uppercase; }
+.card .host { font-weight: 400; color: var(--muted); text-transform: none; letter-spacing: 0; }
+
+.c-red { --chip: var(--red) } .c-yellow { --chip: var(--yellow) } .c-blue { --chip: var(--blue) } .c-aqua { --chip: var(--aqua) }
+
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.85rem; }
+
+@media (prefers-reduced-motion: reduce) { a.card { transition: none } a.card:hover { transform: none } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="dashes" aria-hidden="true"><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span></div>
+    <h1>REEF Learning Materials</h1>
+    <p class="full">Reimagining Experiential Education &amp; Fabrication · Harvard SEAS</p>
+    <p class="lede">Training modules, interactive tools, and project guides built for the REEF Makerspace with Claude. Each one opens in a new tab.</p>
+  </header>
+
+  <section aria-labelledby="training">
+    <span class="label" id="training">Equipment training</span>
+    <p class="sub">Self-paced tutorials that prepare makers to use shop equipment safely.</p>
+    <div class="grid">
+      <a class="card c-red" href="https://reefmakerspace.github.io/laser-training/" target="_blank" rel="noopener">
+        <h3>Laser Cutter Training</h3>
+        <p>Safety, setup, and workflow for laser cutting and engraving.</p>
+        <span class="go">Open training <span class="host">· GitHub Pages</span></span>
+      </a>
+      <a class="card c-blue" href="https://reefmakerspace.github.io/CNC-training/" target="_blank" rel="noopener">
+        <h3>CNC Training</h3>
+        <p>Fundamentals of CNC machining, from setup to a finished cut.</p>
+        <span class="go">Open training <span class="host">· GitHub Pages</span></span>
+      </a>
+      <a class="card c-aqua" href="https://reefmakerspace.github.io/3d-printing-tutorial/" target="_blank" rel="noopener">
+        <h3>3D Printing Tutorial</h3>
+        <p>How to prepare, slice, and print a model on REEF printers.</p>
+        <span class="go">Open tutorial <span class="host">· GitHub Pages</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="tools">
+    <span class="label" id="tools">Interactive design tools</span>
+    <p class="sub">Browser tools that let visitors design a takeaway project on the spot.</p>
+    <div class="grid two">
+      <a class="card c-yellow" href="https://reefmakerspace.github.io/nametag-maker/" target="_blank" rel="noopener">
+        <h3>Nametag Maker</h3>
+        <p>Design a custom nametag ready for fabrication.</p>
+        <span class="go">Open tool <span class="host">· GitHub Pages</span></span>
+      </a>
+      <a class="card c-red" href="https://reefmakerspace.github.io/magnet-maker/" target="_blank" rel="noopener">
+        <h3>Magnet Maker</h3>
+        <p>Design a custom magnet ready for fabrication.</p>
+        <span class="go">Open tool <span class="host">· GitHub Pages</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="guides">
+    <span class="label" id="guides">Project guides</span>
+    <p class="sub">Step-by-step instructions for workshop projects.</p>
+    <div class="grid two">
+      <a class="card c-aqua" href="https://drive.google.com/file/d/16o4i-DZI8guPgIMazcQrNqfJBVuikIaa/view?usp=sharing" target="_blank" rel="noopener">
+        <h3>Drawstring Pouch</h3>
+        <p>A sewing project guide for making a drawstring pouch.</p>
+        <span class="go">Open guide <span class="host">· Google Drive</span></span>
+      </a>
+    </div>
+  </section>
+
+  <footer>REEF Makerspace · Harvard John A. Paulson School of Engineering and Applied Sciences</footer>
+</div>
+
+</body></html>
